@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+</head>
+
+<body>
+    <section id="contact" class="fade-in">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required />
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your message..." required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                alert("All fields are required!");
+                return;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email!");
+                return;
+            }
+
+            alert("Message sent successfully!");
+            document.getElementById("contactForm").reset();
+        });
+
+        window.onload = function () {
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('show');
+                }, index * 400); 
+            });
+        };
+    </script>
+
+</body>
+
+</html>
