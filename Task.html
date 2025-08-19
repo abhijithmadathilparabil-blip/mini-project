@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="REACT/img33.jpg" alt="My image">&nbsp;&nbsp;
+            <h1>Abhijith M</h1>
+            <ul>
+                <li>
+                    <a href="index.html"><b>Home</b></a>
+                </li>
+                <li>
+                    <a href="task-tracker.html"><b>Task Tracker</b></a>
+                </li>
+                <li>
+                    <a href="about-me.html"><b>About Me</b></a>
+                </li>
+                <li>
+                    <a href="skills.html"><b>Skills</b></a>
+                </li>
+                <li>
+                    <a href="contact.html"><b>Contact Form</b></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="photo fade-in">
+        <img src="REACT/photo.jpg.png" alt="my-img">
+    </div>
+
+    <div class="discrip fade-in">
+        <h4 style="color: grey; font-size: 30px;">WELCOME TO MY WORLD</h4>
+        <h1>Hi, I'M <span style="color: red;">Abhijith M<br>A </span>Professional coder.!</h1>
+        <h6 style="color: gray; font-size: 20px; align-content: center; justify-content: center;">
+            I’m a Frontend Developer passionate about creating clean, responsive,
+            and user-friendly web applications.
+            I specialize in React, JavaScript, and Tailwind CSS, and I enjoy turning ideas into interactive digital
+            experiences.
+            Currently, I’m working on personal projects to sharpen my skills and explore new technologies.
+            Outside of coding, I love playing football and exploring new tech trends.
+        </h6>
+    </div>
+
+    <script>
+        window.onload = function () {
+            alert("Welcome to my portfolio!-Abhijith M");
+
+            document.querySelectorAll('.fade-in').forEach((el, index) => {
+                setTimeout(() => {
+                    el.classList.add('show');
+                }, index * 400); 
+            });
+        };
+    </script>
+</body>
+
+</html>
